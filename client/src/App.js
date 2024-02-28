@@ -28,6 +28,7 @@ import ProductById from "./pages/Admin/ProductById";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/user/Cart";
 import Payment from "./pages/user/Payment";
+import AdminOrders from "./pages/Admin/AdminOrders";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
                 <Route path="all-product" element={<AllProduct />} />
                 <Route path="product-details/:id" element={<ProductById />} />
                 <Route path="users" element={<Users />} />
+                <Route path="orders" element={<AdminOrders />} />
               </Route>
 
               <Route path="/signup" element={<Signup />} />

@@ -105,9 +105,9 @@ const Header = () => {
                   </Dropdown.Header>
                   <Dropdown.Item icon={HiViewGrid}>
                     <NavLink
-                      to={"/dashboard"}
+                      to={"/dashboard/profile"}
                       className={` flex items-center hover:text-gray-900 ${
-                        location.pathname === "/dashboard"
+                        location.pathname === "/dashboard/profile"
                           ? "text-gray-900 border-b-2 border-gray-900"
                           : "text-gray-500"
                       }`}

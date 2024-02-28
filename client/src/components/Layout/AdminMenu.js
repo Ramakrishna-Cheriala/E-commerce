@@ -2,14 +2,14 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { BiSolidCategory } from "react-icons/bi";
 import { GrProductHunt } from "react-icons/gr";
-import { MdDeleteForever } from "react-icons/md";
+import { MdBorderStyle } from "react-icons/md";
 import { PiUsersThreeFill } from "react-icons/pi";
 import { AiFillContainer } from "react-icons/ai";
 
 const AdminMenu = () => {
   const location = useLocation();
   return (
-    <div className="flex flex-col p-3 bg-gray-200 w-72 h-screen">
+    <div className="flex flex-col p-3 bg-gray-200 w-72 h-full">
       <h1 className="text-3xl font-bold font-playfair tracking-tight mb-5">
         Admin Panel
       </h1>
@@ -60,6 +60,18 @@ const AdminMenu = () => {
       >
         <PiUsersThreeFill className="mr-2" />
         Users
+      </NavLink>
+      <NavLink
+        to="/admindashboard/orders"
+        className={`text-lg flex items-center text-gray-800 hover:text-gray-900 py-2 px-4 rounded-lg mb-2 hover:bg-gray-400
+        ${
+          location.pathname === "/admindashboard/orders"
+            ? "font-bold bg-gray-400"
+            : "bg-gray-300"
+        }`}
+      >
+        <MdBorderStyle className="mr-2" />
+        Orders
       </NavLink>
     </div>
   );

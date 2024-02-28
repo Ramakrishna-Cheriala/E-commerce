@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import UserMenu from "../../components/Layout/UserMenu";
 import Axios from "axios";
 import { useAuth } from "../../context/auth";
+import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
   const [orderDetails, setOrderDetails] = useState([]);
   const [auth] = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     handleFetchOrderDetails();
@@ -84,6 +86,14 @@ const Orders = () => {
                 <li key={product.productId}>
                   {index + 1}. {product.productName} - Quantity:{" "}
                   {product.quantity}
+                  <button
+                    className="mt-4 ml-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
+                    onClick={() => {
+                      navigate(`/product-details/${product.productId}`);
+                    }}
+                  >
+                    View Details
+                  </button>
                 </li>
               ))}
             </ul>
