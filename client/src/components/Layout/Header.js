@@ -172,8 +172,8 @@ const Header = () => {
                       Admin Dashboard
                     </NavLink>
                   </Dropdown.Item>
-                  // <Dropdown.Item icon={BsCart3}>
-                    {/* <NavLink
+                  {/*// <Dropdown.Item icon={BsCart3}>
+                     <NavLink
                       to={"/Cart"}
                       className={` flex items-center hover:text-gray-900 ${
                         location.pathname === "/Cart"
@@ -182,8 +182,8 @@ const Header = () => {
                       }`}
                     >
                       admin panal 2
-                    </NavLink> */}
-                  </Dropdown.Item>
+                    </NavLink> 
+                  // </Dropdown.Item> */}
                   <Dropdown.Divider />
                   <Dropdown.Item
                     icon={HiLogout}
